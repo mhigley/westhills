@@ -23,43 +23,14 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='Elements.html'>Elements</a>, Previous: <a href='01_01 - The Basics.html'>01_01 - The Basics</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='Inline Elements.html'>Inline Elements</a>, Previous: <a href='Layout Elements.html'>Layout Elements</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
-        <h2>01_02 - Working with Staging</h2>
+        <h2>Block Elements</h2>
       </div>
-      <div id="contentarea"><div class="cell markdown-cell"><blockquote>
-<p>TLDR:</p>
-<ul>
-<li><code>git checkout</code></li>
-<li><code>git reset HEAD</code></li>
-</ul>
-</blockquote>
-<p>make a change to a file<br>
-git status (not staged)<br>
-git checkout (discard changes in working directory)<br>
-git checkout index.html (edited file)<br>
-git checkout . (all files)</p>
-<p>undo to revision two<br>
-git status<br>
-git add . (add to staging)<br>
-clear<br>
-git status</p>
-</div><div class="cell markdown-cell"><h2><code>git checkout</code></h2>
-<hr>
-<p>Discards all changes of a single document or all documents in a working directory</p>
-<p>Essentially, using this is an undo with superpowers.</p>
-<h4>Do This:</h4>
-<ul>
-<li>Make a change to your <strong>index.html</strong> file</li>
-<li><code>git status</code></li>
-<li>Make a change to your <strong>about.html</strong> file</li>
-<li><code>git status</code></li>
-<li>Now let's try out our new command on a single file. <code>git checkout index.html</code>.</li>
-</ul>
-</div></div>
+      <div id="contentarea"></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'Elements.html';
-if (e.keyCode === 37) window.location.href = '01_01 - The Basics.html';
+if (e.keyCode === 39) window.location.href = 'Inline Elements.html';
+if (e.keyCode === 37) window.location.href = 'Layout Elements.html';
 }</script>
     </body>
     </html>

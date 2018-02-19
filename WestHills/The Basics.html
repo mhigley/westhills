@@ -1,0 +1,155 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-monokai .ace_gutter {background: #2F3129;color: #8F908A}.ace-monokai .ace_print-margin {width: 1px;background: #555651}.ace-monokai {background-color: #272822;color: #F8F8F2}.ace-monokai .ace_cursor {color: #F8F8F0}.ace-monokai .ace_marker-layer .ace_selection {background: #49483E}.ace-monokai.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #272822;}.ace-monokai .ace_marker-layer .ace_step {background: rgb(102, 82, 0)}.ace-monokai .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid #49483E}.ace-monokai .ace_marker-layer .ace_active-line {background: #202020}.ace-monokai .ace_gutter-active-line {background-color: #272727}.ace-monokai .ace_marker-layer .ace_selected-word {border: 1px solid #49483E}.ace-monokai .ace_invisible {color: #52524d}.ace-monokai .ace_entity.ace_name.ace_tag,.ace-monokai .ace_keyword,.ace-monokai .ace_meta.ace_tag,.ace-monokai .ace_storage {color: #F92672}.ace-monokai .ace_punctuation,.ace-monokai .ace_punctuation.ace_tag {color: #fff}.ace-monokai .ace_constant.ace_character,.ace-monokai .ace_constant.ace_language,.ace-monokai .ace_constant.ace_numeric,.ace-monokai .ace_constant.ace_other {color: #AE81FF}.ace-monokai .ace_invalid {color: #F8F8F0;background-color: #F92672}.ace-monokai .ace_invalid.ace_deprecated {color: #F8F8F0;background-color: #AE81FF}.ace-monokai .ace_support.ace_constant,.ace-monokai .ace_support.ace_function {color: #66D9EF}.ace-monokai .ace_fold {background-color: #A6E22E;border-color: #F8F8F2}.ace-monokai .ace_storage.ace_type,.ace-monokai .ace_support.ace_class,.ace-monokai .ace_support.ace_type {font-style: italic;color: #66D9EF}.ace-monokai .ace_entity.ace_name.ace_function,.ace-monokai .ace_entity.ace_other,.ace-monokai .ace_entity.ace_other.ace_attribute-name,.ace-monokai .ace_variable {color: #A6E22E}.ace-monokai .ace_variable.ace_parameter {font-style: italic;color: #FD971F}.ace-monokai .ace_string {color: #E6DB74}.ace-monokai .ace_comment {color: #75715E}.ace-monokai .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ0FD0ZXBzd/wPAAjVAoxeSgNeAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='Install on Windows.html'>Install on Windows</a>, Previous: <a href='Working with Staging.html'>Working with Staging</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>The Basics</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><blockquote>
+<p>TLDR:</p>
+<ul>
+<li><code>git init</code></li>
+<li><code>git status</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit -m "Your message here"</code></li>
+<li><code>git log</code></li>
+<li><code>mkdir</code></li>
+<li><code>cd</code></li>
+<li><code>ls</code></li>
+<li><code>clear</code></li>
+</ul>
+</blockquote>
+</div><div class="cell markdown-cell"><h3><code>git init</code></h3>
+<hr>
+<p>Creates a new repository from a folder</p>
+<h4>Do This:</h4>
+<ul>
+<li>Open the Terminal</li>
+<li>At the prompt, lets <code>cd</code> (change directory) to the Desktop</li>
+<li><code>cd ~/Desktop</code></li>
+</ul>
+<blockquote>
+<p>Note: You'll see me use the <code>~</code> (tilde: pronounced til-d<em>uh</em>) a lot. From wherever you are, starting with the tilde <strong>always</strong> brings you back to the home folder.<br>
+Another shortcut back to your home folder is just the <code>cd</code> command. Try it. Bury yourself deep into the system then as a standalone command, type <code>cd</code>. Shibby.</p>
+</blockquote>
+<ul>
+<li>Now type <code>mkdir my-project</code></li>
+</ul>
+<blockquote>
+<p>Note: <code>mkdir</code> is exactly what is sounds like when you sound it out. "Make Dir(ectory)"</p>
+</blockquote>
+<ul>
+<li>Now lets <code>cd</code> into the new folder we just made.</li>
+<li><code>cd my-project</code></li>
+<li>Now that we are <em>inside</em> the folder we want to track, lets initialize git with <code>git init</code></li>
+</ul>
+<p>Let's create a couple files inside this project folder</p>
+<ul>
+<li>Type <code>touch index.html</code>. This will create a new blank HTML document.</li>
+<li>Try typing <code>code .</code> (This should open the project folder inside of VSCode)</li>
+<li>Double click the <strong>index.html</strong> in the sidebar to edit.</li>
+<li>On line 1, type <code>!</code> then press <code>tab</code>. Shazam! Insta-code!</li>
+<li>Between the open <code>&lt;body&gt;</code> tag and the closing <code>&lt;/body&gt;</code> tag, let's add some markup</li>
+</ul>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;h1&gt;Headline for the Index page&lt;/h1&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;p&gt;Between the open and closing paragraph tags, you can type whatever you like&lt;/p&gt;
+</div></div></div></pre>
+<ul>
+<li>Be sure to save your work with <code>ctl</code> + <code>s</code> (win) or <code>⌘</code> + <code>s</code> (mac)</li>
+<li>Go back to the Terminal and try <code>ls</code>. This lists the names of the files in your current working directory. Try adding on some additional options like <code>-a</code>, or <code>-al</code>.</li>
+</ul>
+<p>Let's duplicate this file now from the Terminal</p>
+<ul>
+<li><code>cp index.html about.html</code></li>
+<li>Try <code>ls</code> with a variation of options again.</li>
+</ul>
+</div><div class="cell markdown-cell"><h3><code>git status</code></h3>
+<hr>
+<p>Git status shows you the current state of all edited or staged files.</p>
+<h4>Do This:</h4>
+<ul>
+<li>Type <code>git status</code><br>
+Try it out. Notice that it writes out all the files and lists them as <strong>Untracked</strong>. As of right now, git knows nothing about these two files.</li>
+</ul>
+</div><div class="cell markdown-cell"><h3><code>git add</code></h3>
+<hr>
+<p>Git add moves files from being untracked into a staging environment.</p>
+<p>There are two different ways of adding files to staging. First we'll add just a single file.</p>
+<h4>Do This:</h4>
+<ul>
+<li><code>git add index.html</code></li>
+<li>Do another <code>git status</code>, what has changed?</li>
+</ul>
+<blockquote>
+<p>Note: Adding files is kinda like saving your work, but nothing is set in stone. You can keep making edits and changes and add more work.</p>
+</blockquote>
+<ul>
+<li>Go back into VSCode and make a change to your <strong>index.html</strong> file.</li>
+<li>Then do another <code>git status</code></li>
+</ul>
+<p>Git knows about the file and recognizes that changes have been made but have not been added yet.<br>
+Let's try another way of adding files.</p>
+<ul>
+<li><code>git add .</code> (That is a space after <code>add</code> and then a period)</li>
+</ul>
+<p>This adds all new <em>and</em> modified files to be staged.</p>
+<ul>
+<li><code>git status</code></li>
+</ul>
+</div><div class="cell markdown-cell"><h3><code>git commit</code></h3>
+<hr>
+<p>Git commit creates a more permanent record of files and folders created or modified.</p>
+<p>This one is a doozey. You're accustomed to <code>git</code>. Next, we want a more permanent record of your saved changes with <code>commit</code>. After that is an option flag to add a message with <code>-m</code> (not optional). Last is the actual message with <code>"Your message here"</code>. Let's commit this mug.</p>
+<h4>Do This:</h4>
+<ul>
+<li><code>git commit -m "Adding first pages"</code></li>
+</ul>
+</div><div class="cell markdown-cell"><blockquote>
+<p>Note: You may be propted after first running this command to save some configuration data. Run both of the lines of code with your information replacing the sample text<br>
+<code>git config --global user.name "Your Github Name"</code><br>
+<code>git config --global user.email "Your Github Email Address"</code></p>
+</blockquote>
+<ul>
+<li>I believe if you had to supply the above information, you'll have to run the <code>commit</code> command again.</li>
+<li>Try out the <code>clear</code> command to clean up a long and messy Terminal window.</li>
+<li>Run <code>git status</code> again. Notice it's message: "<strong>On branch master. Nothing to commit.</strong>" (We'll discuss branches soon)</li>
+</ul>
+</div><div class="cell markdown-cell"><h3><code>git log</code></h3>
+<hr>
+<p>Imagine if you were to print out a list of all the changes you made. It would be "permanent". That is what <code>git log</code> does. It prints out all the committed changes.</p>
+<h4>Do This:</h4>
+<ul>
+<li><code>git log</code></li>
+</ul>
+<p>Notice the information it provides you.</p>
+<p>First, a unique tracking number identifying your commit. Second it shows who and when the commit was made by. Lastly, it prints out the first line of your commit message.</p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'Install on Windows.html';
+if (e.keyCode === 37) window.location.href = 'Working with Staging.html';
+}</script>
+    </body>
+    </html>
+  

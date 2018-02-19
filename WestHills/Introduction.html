@@ -23,42 +23,57 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='01_00.1 - Install on Windows.html'>01_00.1 - Install on Windows</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='Layout Elements.html'>Layout Elements</a>, Previous: <a href='Essentials.html'>Essentials</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
-        <h2>01_00.2 - Install on Mac</h2>
+        <h2>Introduction</h2>
       </div>
-      <div id="contentarea"><div class="cell markdown-cell"><h1>Installation</h1>
-</div><div class="cell markdown-cell"><p>Go to <a href="https://git-scm.com">git-scm.com</a><br>
-Click on the <strong>Download 2.x for Mac</strong> button</p>
-<p><img src="resources/8D6D496282CD1334287888A6F4E0E629.png" alt="Git for Mac.png"></p>
-</div><div class="cell markdown-cell"><blockquote>
-<p><strong>NOTE:</strong> If system security prompts you, you'll need to allow installation of a third-party application</p>
+      <div id="contentarea"><div class="cell markdown-cell"><blockquote>
+<p>TLDR:</p>
+<ul>
+<li><code>&lt;&gt;</code></li>
+<li>Open &amp;&amp; Close Tags</li>
+<li>Void or Self-Closing Tags</li>
+<li>Validation</li>
+</ul>
 </blockquote>
-<p>Double click downloaded package to begin installation<br>
-<img src="resources/D04776D79C11E79D6F826A4DB0DD9302.png" alt="Screen Shot 2018-02-14 at 1.58.45 PM.png"></p>
-</div><div class="cell markdown-cell"><p>Open up <strong>System Preferences</strong> and click on <strong>Security &amp; Privacy</strong><br>
-<img src="resources/00F6F582C081041DA4767ACB8B4AD793.png" alt="Screen Shot 2018-02-14 at 1.59.03 PM.png"></p>
-</div><div class="cell markdown-cell"><p>Click on the <strong>Open Anyway</strong> button to allow installation of a third-party application<br>
-<img src="resources/A3EEF6A2C4582A0C030ACBD30A5F7A29.png" alt="Screen Shot 2018-02-14 at 1.59.11 PM.png"></p>
-</div><div class="cell markdown-cell"><p>Select <strong>Open</strong><br>
-<img src="resources/BD19B016A23B8162D7A02974C6BD7795.png" alt="Screen Shot 2018-02-14 at 1.59.20 PM.png"></p>
-</div><div class="cell markdown-cell"><p>Click <strong>Install</strong><br>
-<img src="resources/BB51885354FD96453BA739D4C01D83FD.png" alt="Screen Shot 2018-02-14 at 1.59.42 PM.png"></p>
-</div><div class="cell markdown-cell"><p>By allowing a third-party application, you'll probably need to enter your system password.<br>
-<img src="resources/7691BBD8297D5C9E6887FB9A1BCE53C3.png" alt="Screen Shot 2018-02-14 at 1.59.45 PM.png"></p>
-</div><div class="cell markdown-cell"><p>Hazzah!<br>
-<img src="resources/8F56BB58CF55F7F6A84A7AA0DE8CE8E2.png" alt="Screen Shot 2018-02-14 at 1.59.55 PM.png"></p>
-</div><div class="cell markdown-cell"><h3>Test your installation.</h3>
-<p><code>⌘</code> + <code>space</code> to enter Spotlight Search<br>
-Type `Terminal</p>
-<blockquote>
-<p>Note: Please drag this app to your dock. We'll be using this application <strong>every day</strong>!</p>
-</blockquote>
-</div><div class="cell markdown-cell"><p><img src="resources/CED2B2B2DD575E1E919D9041F6F6A411.png" alt="Screen Shot 2018-02-15 at 10.58.38 AM.png" width="1130" height="721"><br>
-At the <code>$</code> prompt, type <code>git --version</code></p>
+</div><div class="cell markdown-cell"><h2><code>&lt;&gt;</code></h2>
+<hr>
+<p>Every declaration and tag is surrounded by these guys.</p>
+<p>In math they're the less than and greater than signs. In markup some people call them carrots, others call them angle brackets. Regardless, every tag needs them. Think of them as the bread that holds your sandwich together. Without them, it's just a royal mess.</p>
+</div><div class="cell markdown-cell"><h2>Open and Close Tags</h2>
+<hr>
+<p>In addition to every tag needing to be wrapped in angle brackets (<code>&lt;&gt;</code>), <strong><em>most</em></strong> tags come in corresponding pairs.</p>
+<p>For instance. You want to properly markup a paragraph. A <strong>paragraph tag</strong> would be ideal and it comes in two pieces: an opening <code>&lt;p&gt;</code> and a closing <code>&lt;/p&gt;</code>.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;p&gt;Your scientists were so preoccupied with whether they could, they didn't stop to think if they should.&lt;/p&gt;
+</div></div></div></pre>
+<p>Pay close attention to the differences between the open tag and the closing tag.</p>
+</div><div class="cell markdown-cell"><h2>Void or Self-Closing Tags</h2>
+<hr>
+<p>There are a few exceptions to the open and closing tag rule. Some tags <strong>cannot</strong> have content. You saw that the <code>&lt;p&gt;</code> could contain text.</p>
+<p>An image tag however cannot.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;img src="/img/classy_raptor.jpg" alt="A raptor wearing a top hat and bow tie"&gt;
+</div></div></div></pre>
+<p>Although there is a lot going on inside this tag which we'll get into, note that there is <strong>no</strong> closing tag.</p>
+</div><div class="cell markdown-cell"><h2>Validation</h2>
+<hr>
+<h3><a href="https://validator.w3.org/nu/#textarea">https://validator.w3.org/nu/#textarea</a></h3>
+<p>You're going to want to bookmark this website. It validates your page and gives you valuable feedback to writing good markup.</p>
+<p>Let's create the shortest possible valid website. You may not know what this is yet, but we'll review it shortly. For now, in your <strong>index.html</strong> write:</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;!DOCTYPE html&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;title&gt;World's Shortest Website&lt;/title&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>Hello World
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>Copy and paste the above code into the validator</li>
+<li>Now let's break it</li>
+<li>Delete the last angle bracket (<code>&gt;</code>) on line 2</li>
+<li>Run the validator check again</li>
+</ul>
 </div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = '01_00.1 - Install on Windows.html';
+if (e.keyCode === 39) window.location.href = 'Layout Elements.html';
+if (e.keyCode === 37) window.location.href = 'Essentials.html';
 }</script>
     </body>
     </html>

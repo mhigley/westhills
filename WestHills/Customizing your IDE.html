@@ -23,31 +23,96 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='Essentials.html'>Essentials</a>, Previous: <a href='Install on Mac.html'>Install on Mac</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='IDE for Mac.html'>IDE for Mac</a>, Previous: <a href='Git Resources.html'>Git Resources</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
-        <h2>Elements</h2>
+        <h2>Customizing your IDE</h2>
       </div>
-      <div id="contentarea"><div class="cell markdown-cell"><blockquote>
-<p>Note: This is going to be a considerably condensed list of tags. I'll only be discussing some of the most commonly used tags.<br>
-For a complete list, please go to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></p>
+      <div id="contentarea"><div class="cell markdown-cell"><p><img src="resources/F619C7F5F5C08C80A78007805CB04710.png" alt="Screen Shot 2018-02-15 at 11.37.02 AM.png" width="1411" height="936"></p>
+</div><div class="cell markdown-cell"><h2>Plugins</h2>
+</div><div class="cell markdown-cell"><p>Clicking on the "puzzle block" icon on the left navigation bar of VSCode opens the sidebar and lets you start installing plugins.</p>
+<blockquote>
+<p>Note: You can click on any of the icons for various purposes to open and close the sidebar.</p>
 </blockquote>
-</div><div class="cell markdown-cell"><blockquote>
-<p>TLDR:</p>
+<p>Let's type <code>Autoprefixer</code> into the search box and install our first plugin. You may have to click the <strong>refresh</strong> button to turn on the plugin.</p>
+<p><img src="resources/72619624D6BC1521282217B837A629EA.png" alt="Screen Shot 2018-02-15 at 11.37.12 AM.png" width="1411" height="936"></p>
+</div><div class="cell markdown-cell"><p>Now search for the remaining four plugins and install each of those.</p>
+<blockquote>
+<p>Note: Second level plugins are <em>automatically</em> installed as dependencies of first level plugins. It's like getting 10 free plugins for the price of 5!</p>
+</blockquote>
 <ul>
-<li><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></li>
-<li><code>&lt;p&gt;</code></li>
-<li><code>&lt;a&gt;</code></li>
-<li><code>&lt;ul&gt;</code></li>
-<li><code>&lt;img&gt;</code></li>
+<li>Autoprefixer</li>
+<li>Bracket Pair Colorizer</li>
+<li>Live Sass Compiler
+<ul>
+<li>Live Server</li>
 </ul>
+</li>
+<li>Angular Essentials
+<ul>
+<li>Angular Language Service</li>
+<li>Angular v5 Snippets</li>
+<li>Angular2-inline</li>
+<li>Debugger for Chrome</li>
+<li>EditorConfig for VS Code</li>
+<li>Path Intellisense</li>
+<li>Prettier - Code Formatter</li>
+<li>TSLint</li>
+<li>Winter is Coming Theme</li>
+</ul>
+</li>
+<li>VSCode-Icons</li>
+</ul>
+</div><div class="cell markdown-cell"><h2>Settings</h2>
+<p>The <code>settings.json</code> file will need to be placed in the following folders:<br>
+<strong>Windows</strong>: ~/AppData/Roaming/Code/User/settings.json<br>
+<strong>Mac</strong>: ~/Library/Application Support/Code/User/settings.json</p>
+<p>Let's add this now.</p>
+</div><div class="cell markdown-cell"><ul>
+<li>Go to <a href="https://github.com/mhigley/vscode-customization">https://github.com/mhigley/vscode-customization</a> and click on <strong>mac.settings.json</strong> or <strong>win.settings.json</strong> respectively, then select <strong>raw</strong> button to view the file.</li>
+<li>Save the file to your <strong>Desktop</strong>. Windows: <code>ctl</code> + <code>s</code> or Mac: <code>⌘</code> + <code>s</code>.</li>
+</ul>
+<blockquote>
+<p>Note: Windows users, your file will probably be saved as a .txt file. We'll fix that momentarily.</p>
 </blockquote>
-</div><div class="cell markdown-cell"><h2><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></h2>
-<hr>
-<p>These are headline elements, <code>&lt;h1&gt;</code> being the highest section level and <code>&lt;h6&gt;</code> being the lowest.</p>
+<ul>
+<li>Open your Terminal</li>
+<li>Windows:
+<ul>
+<li><code>mv ~/Desktop/win.settings.json.txt ~/AppData/Roaming/Code/User/settings.json</code></li>
+</ul>
+</li>
+<li>Mac:
+<ul>
+<li><code>mv ~/Desktop/mac.settings.json ~/Library/Application Support/Code/User/settings.json</code></li>
+</ul>
+</li>
+</ul>
+</div><div class="cell markdown-cell"><h2>Font</h2>
+<p>If you noticed in your <code>settings.json</code> file you just copied into the VSCode app, the very first line referred to a font you probably don't have on your system already. Let's fix that.<br>
+Go to <a href="https://github.com/tonsky/FiraCode">https://github.com/tonsky/FiraCode</a> and download a zipped version of the repo.</p>
+</div><div class="cell markdown-cell"><p><img src="resources/05B451819A961161D0480F57383B6A23.png" alt="Screen Shot 2018-02-15 at 3.40.48 PM.png" width="1440" height="900"></p>
+<p>Unzip that file, double click into the <code>FiraCode-Master</code> folder then into the <code>distr</code> folder.</p>
+</div><div class="cell markdown-cell"><ul>
+<li>Win:
+<ul>
+<li>Open the <code>ttf</code> folder and double click each file. Click the <strong>install</strong> button to add it to your system.</li>
+</ul>
+</li>
+</ul>
+<p><img src="resources/71666CB9963E486BD0B49472DBF75524.png" alt="firacode.PNG" width="758" height="388"></p>
+</div><div class="cell markdown-cell"><ul>
+<li>Mac:
+<ul>
+<li><code>⌘</code> + <code>space</code> and type <code>Font Book</code> and click on the result to open.</li>
+<li>Open the <code>otf</code> folder and drag all the fonts into your <strong>Font Book</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><img src="resources/46BCB2E9EAD10AD37500175B0DFFBAD6.png" alt="Screen Shot 2018-02-15 at 3.44.28 PM.png" width="1440" height="900"></p>
 </div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'Essentials.html';
-if (e.keyCode === 37) window.location.href = 'Install on Mac.html';
+if (e.keyCode === 39) window.location.href = 'IDE for Mac.html';
+if (e.keyCode === 37) window.location.href = 'Git Resources.html';
 }</script>
     </body>
     </html>
