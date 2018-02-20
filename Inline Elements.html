@@ -23,14 +23,90 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='Git Resources.html'>Git Resources</a>, Previous: <a href='Block Elements.html'>Block Elements</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='Block Elements.html'>Block Elements</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
         <h2>Inline Elements</h2>
       </div>
-      <div id="contentarea"></div>
+      <div id="contentarea"><div class="cell markdown-cell"><h4>Key differentiator</h4>
+<p>Inline elements do not clear previous content to drop to the next line like block elements.</p>
+</div><div class="cell markdown-cell"><blockquote>
+<p>TLDR:</p>
+<ul>
+<li><code>&lt;em&gt;</code></li>
+<li><code>&lt;strong&gt;</code></li>
+<li><code>&lt;input&gt;</code></li>
+<li><code>&lt;button&gt;</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>&lt;span&gt;</code></li>
+</ul>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;em&gt;</code></h2>
+<hr>
+<p>This element marks text that has stress emphasis.</p>
+<p>Inline elements such as the <code>&lt;em&gt;</code> tag flows along with text content and should be used as such. The element is often used to indicate an implicit or explicit contrast.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;p&gt;T. Rex doesn't want to be &lt;em&gt;fed&lt;/em&gt;, he wants to &lt;em&gt;hunt&lt;/em&gt;. Can't just... suppress 65 million years of gut instinct.&lt;/p&gt; 
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>From the Terminal, use the <code>touch</code> command to create a new <strong>inline.html</strong> file.</li>
+<li>Using the Emmet <code>!</code> shortcut, add in the page scaffolding</li>
+<li>Inside the <code>&lt;body&gt;</code> tag, create a <code>&lt;p&gt;</code> tag and 100 words of lorem ipsum.</li>
+<li>Somewhere in your paragraph, open up an <code>&lt;em&gt;</code> tag and a dozen or so words later, close your <code>&lt;/em&gt;</code> tag.</li>
+</ul>
+</div><div class="cell markdown-cell"><h2><code>&lt;strong&gt;</code></h2>
+<hr>
+<p>This element indicates that its contents have strong importance, seriousness, or urgency.</p>
+<p>This could be used to merely try to point out that some words are of greater importance compared to nearby content.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;p&gt;Mr. Hammond, after careful consideration, I've decided &lt;strong&gt;not&lt;/strong&gt; to endorse your park.&lt;/p&gt; 
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>Choose a few word of your lorem ipsum and wrap them in an open <code>&lt;strong&gt;</code> and close with a closing <code>&lt;/strong&gt;</code> tag.</li>
+</ul>
+<blockquote>
+<p>Danger! Besure you don't cross your HTML tags! Yes, you may nest them, but don't close a pair in the middle of another pair.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;p&gt;This is an example of how &lt;strong&gt;&lt;em&gt;not&lt;/strong&gt;&lt;/em&gt; to use inline elements&lt;/p&gt;
+</div></div></div></pre>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;input&gt;</code></h2>
+<hr>
+<p>This element is used to create interactive controls for web-based forms in order to accept data from the user.</p>
+<p>The <code>&lt;input&gt;</code> is a key feature in gathering information from your user. In a static website, you'll have no way of capturing that data, but we'll deal with that later.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;input type="text"&gt; 
+</div></div></div></pre>
+<p>Notice the <code>type</code> attribute inside the <code>&lt;input&gt;</code> tag. There are more than 20 different types and the types vary in functionality. The basic <code>type="text"</code> captures letters, numbers and potentially special characters.</p>
+<h4>Do This:</h4>
+<ul>
+<li>After your paragraph, create an <code>&lt;input&gt;</code> tag that captures user text.</li>
+<li>When you finish, figure out how to have "helper text" visible in the box guiding the user as to proper input</li>
+</ul>
+</div><div class="cell markdown-cell"><h2><code>&lt;button&gt;</code></h2>
+<hr>
+<p>The <code>&lt;button&gt;</code> tag defines a clickable button.</p>
+<p>This element requires both an open and closing tag. The text you put between will be the button text.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;button type="button"&gt;Click Here&lt;/button&gt;
+</div></div></div></pre>
+<p>Notice I've included a <code>type</code> for a button. This element has three potientially different defaults depending the users browser.</p>
+<h4>Do This:</h4>
+<ul>
+<li>On the line <em>after</em> your <code>&lt;input&gt;</code>tag, create a <code>&lt;button&gt;</code> with text instructing the user.</li>
+</ul>
+<blockquote>
+<p>Note: Typically, the <code>&lt;button&gt;</code> element is for interactivity. There is a different element to submit the capture of user data.</p>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;span&gt;</code></h2>
+<hr>
+<p>This is a <strong><em>generic</em></strong> inline container for phrasing content, which does not inherently represent anything.</p>
+<p>If you need specific styling applied to a string of text preventing any defining of content, use a <code>&lt;span&gt;</code>.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;p&gt;There is a section of content beginning here &lt;span&gt;that contains &lt;strong&gt;important&lt;/strong&gt; or &lt;em&gt;accentuated&lt;/em&gt; words&lt;/span&gt; I want to target&lt;/p&gt;
+</div></div></div></pre>
+<p>There are the two words in the example that have appropriate HTML tags applied defining them. However, a portion of the sentence can be wrapped with a <code>&lt;span&gt;</code> tag that enables the ability to be highlighted without affecting their meaning.</p>
+</div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'Git Resources.html';
-if (e.keyCode === 37) window.location.href = 'Block Elements.html';
+if (e.keyCode === 39) window.location.href = 'Block Elements.html';
 }</script>
     </body>
     </html>

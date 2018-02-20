@@ -23,14 +23,107 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='Inline Elements.html'>Inline Elements</a>, Previous: <a href='Layout Elements.html'>Layout Elements</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='Layout Elements.html'>Layout Elements</a>, Previous: <a href='Inline Elements.html'>Inline Elements</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
         <h2>Block Elements</h2>
       </div>
-      <div id="contentarea"></div>
+      <div id="contentarea"><div class="cell markdown-cell"><h4>Key differentiator</h4>
+<p>A block element, if no width is set, will expand naturally to fill its parent container. Also, by default, it will be placed below previous elements in the markup.</p>
+</div><div class="cell markdown-cell"><blockquote>
+<p>TLDR:</p>
+<ul>
+<li><code>&lt;address&gt;</code></li>
+<li><code>&lt;blockquote&gt;</code></li>
+<li><code>&lt;ol&gt;</code></li>
+<li><code>&lt;video&gt;</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>&lt;div&gt;</code></li>
+</ul>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;address&gt;</code></h2>
+<hr>
+<p>This element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.</p>
+<p>This is another HTML tag providing useful semantic meaning to help visually impaired identify addresses.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;address&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  Bitwise Industries&lt;br&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  700 Van Ness Ave.&lt;br&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  Fresno, CA 93721
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/address&gt;
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>From the Terminal, use the <code>touch</code> command to create a new <strong>block.html</strong> file.</li>
+<li>Using the Emmet <code>!</code> shortcut, add in the page scaffolding</li>
+<li>Inside the <code>&lt;body&gt;</code> tag, add an <code>&lt;address&gt;</code> tag and put in your address.</li>
+</ul>
+<blockquote>
+<p>Note: There is a small element, <code>&lt;br&gt;</code>, in here that breaks a line of text to a new line. It's called a line break.</p>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;blockquote&gt;</code></h2>
+<hr>
+<p>This element indicates that the enclosed text is an extended quotation.</p>
+<p>If you need to represent a client testimonial or similar quote, the <code>&lt;blockquote&gt;</code> is your best option.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;blockquote cite="http://www.moviequotedb.com/movies/jurassic-park/quote_12179.html"&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;p&gt;God creates dinosaurs. God destroys dinosaurs. God creates man. Man destroys God. Man creates dinosaurs.&lt;/p&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/blockquote&gt;
+</div></div></div></pre>
+<p>Surrounding a <code>&lt;p&gt;</code> tag with the <code>&lt;blockquote&gt;</code> changes the meaning of the paragraph to an actual citeable quote. Notice the <code>cite</code> attribute providing the link to the quote location.</p>
+<h4>Do This:</h4>
+<ul>
+<li>After the <code>&lt;address&gt;</code> tag in your <strong>block.html</strong> file, create a short paragraph tag with some quoteable text.</li>
+<li>Now wrap that <code>&lt;p&gt;</code> tag with the <code>&lt;blockquote&gt;</code> and adjust your indentions appropriately.</li>
+<li>Try to find a source for your quote online and use the <code>cite</code> attribute.</li>
+</ul>
+</div><div class="cell markdown-cell"><h2><code>&lt;ol&gt;</code></h2>
+<hr>
+<p>This element represents an ordered list of items, typically rendered as a numbered list.</p>
+<p>Virtually identical to the <code>&lt;ul&gt;</code> except creating a numbered list instead of bulleted.</p>
+<p>The list of items are marked up with <code>&lt;li&gt;</code> tags creating a parent/child relationship. If you want to use an <code>&lt;li&gt;</code>, it <strong>must</strong> be nested inside a <code>&lt;ol&gt;</code>. If you want to use the <code>&lt;ol&gt;</code>, the <em>immediate child element</em> <strong>must</strong> be an <code>&lt;li&gt;</code>.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;ul&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;li&gt;Pepsi&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;li&gt;Mt. Dew&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;li&gt;Root Beer&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/ul&gt;
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>Using your <strong>block.html</strong> page, make an ordered list of your top three favorite ice cream flavors.</li>
+</ul>
+</div><div class="cell markdown-cell"><h2><code>&lt;video&gt;</code></h2>
+<hr>
+<p>Use this element to embed video content in a document.</p>
+<p>Ya know... 'cuz video is cool.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;video src="https://storage.googleapis.com/coverr-main/mp4/Play_Date.mp4" width="350px" controls&gt;&lt;/video&gt;
+</div></div></div></pre>
+<p>There are more element attributes than any other we've seen up to this point. The <code>src</code> attribute loads the URL to the webpage. The <code>width</code> and it's <em>value</em> declare a width for the element and <code>controls</code> makes basic controls of the video interactive.</p>
+<h4>Do This:</h4>
+<ul>
+<li>After the your <code>&lt;ol&gt;</code> element, add a <code>&lt;video&gt;</code> element</li>
+<li>Choose a video snippet from <a href="https://coverr.co/">https://coverr.co/</a></li>
+<li>View the video in a new tab (we'll walk through this process)</li>
+<li>"Hotlink" one of thest videos into your webpage</li>
+</ul>
+<blockquote>
+<p>Note: Hotlinking images is bad. After today, don't do it. Last time, I swear.</p>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;div&gt;</code></h2>
+<hr>
+<p>The division element is a <em>generic</em> container for flow content. It has no effect on the content and does not inherently represent anything.</p>
+<p>Basically, if you need specific styling applied to a group of elements and want to prevent incorrect defining of content, use a <code>&lt;div&gt;</code>. You'll use a <strong>lot</strong> of them.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;div&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;img src="https://unsplash.it/250/250" alt="placeholder image"&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;p&gt;landitiis obcaecati minus, corporis laudantium iste fuga, cumque nobis saepe quos a voluptatem fugiat iure soluta eaque impedit.&lt;/p&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;a href="anoter_page.html"&gt;Learn More&lt;/a&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/div&gt;
+</div></div></div></pre>
+<p>The above example may best be represented as an abbreviated biographical summary linking to another page providing additional and more detailed information.</p>
+</div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'Inline Elements.html';
-if (e.keyCode === 37) window.location.href = 'Layout Elements.html';
+if (e.keyCode === 39) window.location.href = 'Layout Elements.html';
+if (e.keyCode === 37) window.location.href = 'Inline Elements.html';
 }</script>
     </body>
     </html>

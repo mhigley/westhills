@@ -23,7 +23,7 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='Introduction.html'>Introduction</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='Index.html'>Index</a>, Previous: <a href='Layout Elements.html'>Layout Elements</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
         <h2>Elements</h2>
       </div>
@@ -56,9 +56,10 @@ For a complete list, please go to <a href="https://developer.mozilla.org/en-US/d
 <ul>
 <li>From the Terminal, use the <code>touch</code> command to create a new <strong>elements.html</strong> file.</li>
 <li>Using the Emmet <code>!</code> shortcut, add in the page scaffolding</li>
-<li>Inside the <code>&lt;body</code> tag, add three different heading tags</li>
+<li>Inside the <code>&lt;body&gt;</code> tag, add three different heading tags</li>
 </ul>
 </div><div class="cell markdown-cell"><h2><code>&lt;p&gt;</code></h2>
+<hr>
 <p>This element represents a paragraph block.</p>
 <p>Without identifying text with elements such as the paragraph tag, the browser has less information to understand your webpage.</p>
 <blockquote>
@@ -71,6 +72,7 @@ For a complete list, please go to <a href="https://developer.mozilla.org/en-US/d
 <li>Add two paragraphs to your <strong>elements.html</strong> page.</li>
 </ul>
 </div><div class="cell markdown-cell"><h2><code>&lt;a&gt;</code></h2>
+<hr>
 <p>The anchor tag creates a link to other web pages, files, locations within the same page, email addresses, or any other URL across the internet.</p>
 <p>This one element is the crux to the entire internet. The single most important tag of all.<br>
 <img src="resources/FC45DC46B31C66FDC360E0DADDE15386.png" alt="Internet_map_1024_-_transparent.png" width="1280" height="1280"></p>
@@ -84,6 +86,7 @@ For a complete list, please go to <a href="https://developer.mozilla.org/en-US/d
 <li>How can we open a new tab when the user clicks the link? (Another element attribute)</li>
 </ul>
 </div><div class="cell markdown-cell"><h2><code>&lt;ul&gt;</code></h2>
+<hr>
 <p>This element represents an unordered list of items, typically rendered as a bulleted list.</p>
 <p>The list of items are marked up with <code>&lt;li&gt;</code> tags creating a parent/child relationship. If you want to use an <code>&lt;li&gt;</code>, it <strong>must</strong> be nested inside a <code>&lt;ul&gt;</code>. If you want to use the <code>&lt;ul&gt;</code>, the <em>immediate child element</em> <strong>must</strong> be an <code>&lt;li&gt;</code>.</p>
 <p>This is a radically useful element for website layout as well as <strong>lots</strong> of things are lists!</p>
@@ -96,9 +99,9 @@ For a complete list, please go to <a href="https://developer.mozilla.org/en-US/d
 <h4>Do This:</h4>
 <ul>
 <li>Using your <strong>elements.html</strong> page, make a list of your five favorite movies.</li>
-<li>Once you're done, figure out how to provide an <em>order</em> of importance to your movie picks.</li>
 </ul>
 </div><div class="cell markdown-cell"><h2><code>&lt;img&gt;</code></h2>
+<hr>
 <p>This element embeds an image into the webpage.</p>
 <p>Similarly to the <code>&lt;a&gt;</code> tag, the <code>&lt;img&gt;</code> requires certain element attributes to properly work. First is the <code>src</code> attribute. This pulls the URL of an image into the webpage when it loads. Also, image tags need an <code>alt</code> attribute. Although it is primarily meant for accessibility purposes, a webpage will <strong>not</strong> validate without the alternative text.</p>
 <pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;img src="https://unsplash.it/500/500" alt="Image from Unsplash"&gt;
@@ -114,7 +117,8 @@ For a complete list, please go to <a href="https://developer.mozilla.org/en-US/d
 </blockquote>
 </div><div class="cell markdown-cell"></div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'Introduction.html';
+if (e.keyCode === 39) window.location.href = 'Index.html';
+if (e.keyCode === 37) window.location.href = 'Layout Elements.html';
 }</script>
     </body>
     </html>

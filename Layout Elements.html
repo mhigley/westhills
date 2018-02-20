@@ -23,14 +23,119 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='Block Elements.html'>Block Elements</a>, Previous: <a href='Essentials.html'>Essentials</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='Elements.html'>Elements</a>, Previous: <a href='Block Elements.html'>Block Elements</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
         <h2>Layout Elements</h2>
       </div>
-      <div id="contentarea"><div class="cell markdown-cell"></div></div>
+      <div id="contentarea"><div class="cell markdown-cell"><p>New HTML (HTML5) offers new semantic elements to define different parts of a web page layout.</p>
+<p>The page layout is the most complicated part of web development. Understanding how to create semantic containers to guide the flow</p>
+</div><div class="cell markdown-cell"><blockquote>
+<p>TLDR:</p>
+<ul>
+<li><code>&lt;nav&gt;</code></li>
+<li><code>&lt;header&gt;</code></li>
+<li><code>&lt;article&gt;</code></li>
+<li><code>&lt;footer&gt;</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Note: All layout tags share <em>block-level</em> attributes!</p>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;nav&gt;</code></h2>
+<hr>
+<p>This element <strong><em>represents</em></strong> a <strong><em>section</em></strong> of a page whose purpose is to provide navigation links, either within the current document or to other documents.</p>
+<p>The two highlightes words in this description are key aspects to the proper usage of these layout elements. They create a "meaning" for, not a thing, but a "group" of things.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;nav&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;ul&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;li&gt;&lt;a href="http://www.imdb.com/title/tt0107290/?ref_=nv_sr_1"&gt;Jurassic Park&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;li&gt;&lt;a href="http://www.imdb.com/title/tt0119567/?ref_=nv_sr_2"&gt;The Lost World: Jurassic Park&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;li&gt;&lt;a href="http://www.imdb.com/title/tt0163025/?ref_=nv_sr_3"&gt;Jurassic Park III&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;/ul&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/nav&gt;
+</div></div></div></pre>
+<p>Notice that this is the most complicated nesting of HTML elements that we've come across. Navigations are one of the more intricate parts of a website, especially if we get into multiple sub-levels of navigation.</p>
+<p>If you break my example down to it's smallest components, I originally started with three anchor tags. Grouped together, they create a <em>list</em> of navigational items so each <code>&lt;a&gt;</code> tag needs to be indivicually wrapped in an <code>&lt;li&gt;</code> tag. Because list items cannot stand alone, I needed to contain <em>all</em> of the items inside of a <code>&lt;ul&gt;</code> tag. An <code>&lt;ol&gt;</code> isn't appropriate here, because there is no greater importance of one over another. Lastly, as it is, this list is nothing more than a list. I need the browser to know this is actual navigation to an outside destination, so I wrapped the entire <code>&lt;ul&gt;</code> inside of a <code>&lt;nav&gt;</code> tag. Done!</p>
+<h4>Do This:</h4>
+<ul>
+<li>From the Terminal, use the <code>touch</code> command to create a new <strong>layout.html</strong> file.</li>
+<li>Using the Emmet <code>!</code> shortcut, add in the page scaffolding</li>
+<li>Inside the <code>&lt;body&gt;</code> tag, start by adding three to five <code>&lt;a&gt;</code> tags with link text and a destination URL for the <code>href</code></li>
+<li>Next, make each of the links into a proper unordered list</li>
+<li>Lastly, wrap that list with the <code>&lt;nav&gt;</code> tags to declare is navigation</li>
+</ul>
+</div><div class="cell markdown-cell"><h2><code>&lt;header&gt;</code></h2>
+<hr>
+<p>This element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on.</p>
+<p>Another element that provides much greater meaning to the content that is laid out within it. It can contain the site logo, the entire site-wide navigation, links to social media, and way more!</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;header&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;img src="img/site_logo.png" alt="Sample Website"&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;nav&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;ul&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  &lt;li&gt;&lt;a href="#"&gt;Navlink 1&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  &lt;li&gt;&lt;a href="#"&gt;Navlink 1&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  &lt;li&gt;&lt;a href="#"&gt;Navlink 1&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;/ul&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;/nav&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;address&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    500 Lane Ave.&lt;br&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    Somecity, CA 90001
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;/address&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/header&gt;
+</div></div></div></pre>
+<blockquote>
+<p>Note: Don't mix up <code>&lt;head&gt;</code> and <code>&lt;header&gt;</code>. They are two very different elements. The <code>&lt;head&gt;</code> tag can <strong>only</strong> be used <em>before</em> the <code>&lt;body&gt;</code> tag, and the <code>&lt;header&gt;</code> tag can only be use <em>inside</em> the <code>&lt;body&gt;</code> tag.</p>
+</blockquote>
+<h4>Do This:</h4>
+<ul>
+<li>Continuing work on the <strong>layout.html</strong> page, add additional information you feel would be found atop a website.</li>
+<li>Think social media, maybe a login field, a company logo, etc...</li>
+<li>Being careful to enclose everything that you just wrote, wrap it all with a <code>&lt;header&gt;</code> tag defining that content.</li>
+</ul>
+</div><div class="cell markdown-cell"><h2><code>&lt;article&gt;</code></h2>
+<hr>
+<p>This element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry.</p>
+<p>This tag is very specific as the definition implies. Imagine that if you were to delete every aspect of your website <em>except</em> the composition, or blog post, could it stand alone? Does the reader get all relavent headlines, subheadings, visuals, author information and content needed to understand the story?</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;article&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;h1&gt;My Article Headline&lt;/h1&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;h2&gt;The Understanding of Complex Design Patterns in UI/UX&lt;/h2&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat commodi est in, cum ipsum molestias provident exercitationem aliquid facilis deserunt ad quos porro, et recusandae? Omnis dolorem quidem aliquam quae!&lt;/p&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;p&gt;Amet fuga enim recusandae maiores itaque voluptatum molestiae culpa alias, eaque, numquam tenetur est commodi sapiente voluptatem consequatur delectus eius corporis similique mollitia? Ipsam, perferendis.&lt;/p&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;p&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    Author: Matthew Higley&lt;br&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;small&gt;Mar 2017&lt;/small&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;/p&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/article&gt;
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>In your <strong>layout.html</strong> page, create some content.</li>
+<li>Think of this content in the form of telling a complete story.</li>
+<li>Include at least a headline, some content and one image.</li>
+<li>Be sure to wrap everything together as a stand-alone syndicatable story</li>
+</ul>
+</div><div class="cell markdown-cell"><h2><code>&lt;footer&gt;</code></h2>
+<hr>
+<p>This element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.</p>
+<p>More often you'll find the <code>&lt;footer&gt;</code> as a near last item of a website. Links for additional information or reference, social media, contact information, and copyright text are all things you can find nested inside a <code>&lt;footer&gt;</code>.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;footer&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;p&gt;Copyright 2018. All rights reserved.&lt;/p&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;ul&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;li&gt;&lt;a href="https://facebook.com"&gt;facebook&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;li&gt;&lt;a href="https://twitter.com"&gt;twitter&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    &lt;li&gt;&lt;a href="https://instagram.com"&gt;instagram&lt;/a&gt;&lt;/li&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  &lt;/ul&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;/footer&gt;
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>At the bottom of your <strong>layout.html</strong> page, create some generic copyright information.</li>
+<li>Add in another block of contact information.</li>
+<li>Wrap everything together that you have determined as footer content inside of the <code>&lt;footer&gt;</code> tag.</li>
+</ul>
+</div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'Block Elements.html';
-if (e.keyCode === 37) window.location.href = 'Essentials.html';
+if (e.keyCode === 39) window.location.href = 'Elements.html';
+if (e.keyCode === 37) window.location.href = 'Block Elements.html';
 }</script>
     </body>
     </html>
