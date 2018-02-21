@@ -23,14 +23,59 @@
       <style> .text-cell {font-size: 15px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;}.latex-cell {font-size: 15px;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='Inline Elements.html'>Inline Elements</a>, Previous: <a href='CSS Introduction.html'>CSS Introduction</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='CSS Introduction.html'>CSS Introduction</a>, Previous: <a href='Index.html'>Index</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
-        <h2>Untitled Note</h2>
+        <h2>HTML Introduction</h2>
       </div>
-      <div id="contentarea"></div>
+      <div id="contentarea"><div class="cell markdown-cell"><p>HTML or Hypertext Markup Language is the universally accepted "language" of the web. Technically however it's not really a programming language. There is a lot of skill and experience needed to write <strong>good</strong> markup.</p>
+<p><img src="resources/6035A872F0BEC6A840E00278E66DC5E7.jpg" alt="html.jpg" width="768" height="576"></p>
+</div><div class="cell markdown-cell"><blockquote>
+<p>TLDR:</p>
+<ul>
+<li><code>&lt;&gt;</code></li>
+<li>Open &amp;&amp; Close Tags</li>
+<li>Void or Self-Closing Tags</li>
+<li>Validation</li>
+</ul>
+</blockquote>
+</div><div class="cell markdown-cell"><h2><code>&lt;&gt;</code></h2>
+<hr>
+<p>Every declaration and tag is surrounded by these guys.</p>
+<p>In math they're the less than and greater than signs. In markup some people call them carrots, others call them angle brackets. Regardless, every tag needs them. Think of them as the bread that holds your sandwich together. Without them, it's just a royal mess.</p>
+</div><div class="cell markdown-cell"><h2>Open and Close Tags</h2>
+<hr>
+<p>In addition to every tag needing to be wrapped in angle brackets (<code>&lt;&gt;</code>), <strong><em>most</em></strong> tags come in corresponding pairs.</p>
+<p>For instance. You want to properly markup a paragraph. A <strong>paragraph tag</strong> would be ideal and it comes in two pieces: an opening <code>&lt;p&gt;</code> and a closing <code>&lt;/p&gt;</code>.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;p&gt;Your scientists were so preoccupied with whether or not they could, they never stopped to think if they should.&lt;/p&gt;
+</div></div></div></pre>
+<p>Pay close attention to the differences between the open tag and the closing tag.</p>
+</div><div class="cell markdown-cell"><h2>Void or Self-Closing Tags</h2>
+<hr>
+<p>There are a few exceptions to the open and closing tag rule. Some tags <strong>cannot</strong> have content. You saw that the <code>&lt;p&gt;</code> could contain text.</p>
+<p>An image tag however cannot.</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;img src="/img/classy_raptor.jpg" alt="A raptor wearing a top hat and bow tie"&gt;
+</div></div></div></pre>
+<p>Although there is a lot going on inside this tag which we'll get into, note that there is <strong>no</strong> closing tag.</p>
+</div><div class="cell markdown-cell"><h2>Validation</h2>
+<hr>
+<h3><a href="https://validator.w3.org/nu/#textarea">https://validator.w3.org/nu/#textarea</a></h3>
+<p>You're going to want to bookmark this website. It validates your page and gives you valuable feedback to writing good markup.</p>
+<p>Let's create the shortest possible valid website. You may not know what this is yet, but we'll review it shortly. For now, in your <strong>index.html</strong> write:</p>
+<pre><div class="ace-monokai"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;!DOCTYPE html&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>&lt;title&gt;World's Shortest Website&lt;/title&gt;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>Hello World
+</div></div></div></pre>
+<h4>Do This:</h4>
+<ul>
+<li>Copy and paste the above code into the validator</li>
+<li>Now let's break it</li>
+<li>Delete the last angle bracket (<code>&gt;</code>) on line 2</li>
+<li>Run the validator check again</li>
+</ul>
+</div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'Inline Elements.html';
-if (e.keyCode === 37) window.location.href = 'CSS Introduction.html';
+if (e.keyCode === 39) window.location.href = 'CSS Introduction.html';
+if (e.keyCode === 37) window.location.href = 'Index.html';
 }</script>
     </body>
     </html>
